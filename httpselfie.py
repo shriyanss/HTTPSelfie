@@ -1,4 +1,4 @@
-# You must have selenium install in
+# You must have selenium installed in
 # your system with firefox webdriver
 
 from selenium import webdriver
