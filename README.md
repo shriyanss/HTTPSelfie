@@ -10,3 +10,6 @@ This is a simple, yet effective http screenshotting tool written in python3
 
 # OS Support
 Any OS with Python 3 and Selenium with webdriver installed can use the tool
+
+## Error handling
+If you think that the tool is stuck somewhere, please reload the page once (in new firefox window created) and it will move on.
