@@ -37,8 +37,12 @@ if __name__ == "__main__":
         for line in file:
             line = line.replace("\n", "")
             url = protocol + "://" + line + ":" + port
-            driver.get(url)
-            sleep(4)
-            driver.get_screenshot_as_file((line + ".png"))
+            try:
+                driver.get(url)
+                sleep(4)
+                driver.get_screenshot_as_file((line + ".png"))
+            except:
+                pass
 
 driver.quit()
+print("[*] Task accomplished!")
