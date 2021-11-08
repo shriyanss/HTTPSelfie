@@ -31,6 +31,7 @@ if __name__ == "__main__":
         port = sys.argv[3]
     except:
         print("Usage: python3 httpselfie.py <path_to_subdomain_list> <protocol(http/https)> <port_no>")
+        driver.quit()
         sys.exit()
     with open(filename, 'r') as file:
         for line in file:
@@ -39,3 +40,5 @@ if __name__ == "__main__":
             driver.get(url)
             sleep(4)
             driver.get_screenshot_as_file((line + ".png"))
+
+driver.quit()
