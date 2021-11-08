@@ -1,5 +1,5 @@
 # HTTPSelfie
-This is a simple, yet effective http screenshotting tool written in python3
+This is a simple, yet effective website screenshotting tool written in python3
 
 # Usage
 - First of all, make a new folder
