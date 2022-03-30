@@ -1,6 +1,7 @@
 # HTTPSelfie
 This is a simple, yet effective website screenshotting tool written in python3
 
+**Found it useful, how about *starring* this *repository* :)**
 # Usage
 - First of all, make a new folder
 - Now, make a list of subdomains in that folder
