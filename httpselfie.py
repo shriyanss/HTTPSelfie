@@ -1,5 +1,7 @@
 # You must have selenium installed in
 # your system with firefox webdriver
+# by default. You can change the 
+# webdriver in line 26
 
 from selenium import webdriver
 import sys, os, re
@@ -28,21 +30,32 @@ if __name__ == "__main__":
     try:
         filename = sys.argv[1]
         protocol = sys.argv[2]
-        port = sys.argv[3]
+        if protocol != "url":
+            port = sys.argv[3]
     except:
-        print("Usage: python3 httpselfie.py <path_to_subdomain_list> <protocol(http/https)> <port_no>")
+        print("Usage: python3 httpselfie.py <path_to_subdomain_list> <protocol(http/https)> <port_no>\n     OR\npython3 httpselfie.py <path_to_url_list> url")
         driver.quit()
         sys.exit()
     with open(filename, 'r') as file:
         for line in file:
-            line = line.replace("\n", "")
-            url = protocol + "://" + line + ":" + port
-            try:
-                driver.get(url)
-                sleep(4)
-                driver.get_screenshot_as_file((line + ".png"))
-            except:
-                pass
+            if sys.argv[2] == "url":
+                try:
+                    driver.get(line)
+                    sleep(4)
+                    driver.get_screenshot_as_file((line.replace("/", ">") + ".png"))
+                    print(line)
+                except:
+                    pass
+            else:
+                line = line.replace("\n", "")
+                url = protocol + "://" + line + ":" + port
+                try:
+                    driver.get(url)
+                    sleep(4)
+                    driver.get_screenshot_as_file((line.replace("/", ">") + ".png"))
+                    print(url)
+                except:
+                    pass
 
 driver.quit()
 print("[*] Task accomplished!")
