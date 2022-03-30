@@ -43,7 +43,7 @@ if __name__ == "__main__":
                     driver.get(line)
                     sleep(4)
                     driver.get_screenshot_as_file((line.replace("/", ">") + ".png"))
-                    print(line)
+                    print(line.replace("\n", ''))
                 except:
                     pass
             else:
