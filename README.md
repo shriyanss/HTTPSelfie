@@ -11,8 +11,10 @@ This is a simple, yet effective website screenshotting tool written in python3
 # Features
 - Screenshot for a subdomains list with certain protocol (http/https) and particular port
     - `python3 httpselfie.py <path_to_subdomain_list> <protocol(http/https)> <port_no>`
+    ![](https://raw.githubusercontent.com/shriyanss/HTTPSelfie/main/media/gif/domains.gif)
 - Screenshot for a list of URLs
     - `python3 httpselfie.py <path_to_url_list> url`
+    ![](https://raw.githubusercontent.com/shriyanss/HTTPSelfie/main/media/gif/urls.gif)
 
 # OS Support
 Any OS with Python 3 and Selenium with webdriver installed can use the tool
