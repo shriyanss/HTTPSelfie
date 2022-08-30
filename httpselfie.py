@@ -38,6 +38,7 @@ if __name__ == "__main__":
         sys.exit()
     with open(filename, 'r') as file:
         for line in file:
+            line = line.replace("\n", '')
             if sys.argv[2] == "url":
                 try:
                     driver.get(line)
